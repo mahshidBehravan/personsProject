@@ -1,0 +1,34 @@
+<form [formGroup]="firstPersonForm">
+  <div>
+  <mat-form-field>
+    <input matInput placeholder="Name" formControlName="name" required>
+  </mat-form-field>
+</div>
+<div>
+  <mat-form-field>
+    <input matInput placeholder="Last Name" formControlName="lastname" required>
+  </mat-form-field>
+</div>
+<div>
+    <mat-form-field>
+      <input matInput placeholder="Phone" formControlName="phone" >
+    </mat-form-field>
+  </div>
+  <div>
+      <mat-form-field>
+        <input matInput placeholder="Email" formControlName="email" required>
+      </mat-form-field>
+    </div>
+
+    <div>
+        <mat-form-field>
+            <input matInput formControlName="birthdate" [matDatepicker]="picker" placeholder="Birthdate">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+      </div>
+      <div>
+          <button mat-button (click)="onSubmit()">Submit</button>
+
+      </div>
+</form>

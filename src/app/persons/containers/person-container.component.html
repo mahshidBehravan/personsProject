@@ -1,0 +1,11 @@
+<mat-tab-group (selectedTabChange)="tabChanged()">
+  <mat-tab label="New Person">
+
+   <app-person (submitPerson)="submitForm($event)" ></app-person>
+
+  </mat-tab>
+  <mat-tab label="Persons List">
+
+    <app-person-list [dataSource]="PersonsList"></app-person-list>
+  </mat-tab>
+</mat-tab-group>
